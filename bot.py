@@ -44,7 +44,7 @@ def hi_command(update, context):
         context.bot.send_message(chat_id=chat_id, text='Error fetching URL')
         
 
-updater = Updater(token='6043554925:AAGVcKddvm8t_nRzgBlclulBFynT0YwAN0s', use_context=True)
+updater = Updater(token='YOUR_BOT_TOKEN', use_context=True)
 dispatcher = updater.dispatcher
 
 dispatcher.add_handler(CommandHandler('hi', hi_command))
