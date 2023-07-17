@@ -38,13 +38,13 @@ def hi_command(update, context):
         pID = data['data']['product_base']['product_base_id']
         mess = "Tên<b>: " + name + "</b>" + pID
 
-        hand = context.bot.send_message(chat_id=chat_id, text=mess, parse_mode=telegram.ParseMode.HTML)
+       context.bot.send_message(chat_id=chat_id, text=mess, parse_mode=telegram.ParseMode.HTML)
 
     except:
         context.bot.send_message(chat_id=chat_id, text='Error fetching URL')
         
 
-updater = Updater(token='YOUR_BOT_TOKEN', use_context=True)
+updater = Updater(token='6043554925:AAGVcKddvm8t_nRzgBlclulBFynT0YwAN0s', use_context=True)
 dispatcher = updater.dispatcher
 
 dispatcher.add_handler(CommandHandler('hi', hi_command))
